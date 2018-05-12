@@ -3,7 +3,7 @@ import os
 import csv
 
 # Set path for csv file
-filepath = "C:\\Users\\Sofia\\OneDrive - Texas Tech University\\Personal\\Education\\Data Analysis Bootcamp\\Week 3 - Python I\\Homework 3\\python-challenge\\PyBank\\raw_data\\budget_data_1.csv"
+filepath = os.path.join('raw_data','budget_data_1.csv')
 
 Months = 0
 Total_Revenue = 0
@@ -14,6 +14,7 @@ greatest_decrease = 9999999999999999999999
 idate = ""
 ddate = ""
 revenue_changes = []
+
 with open(filepath) as csvfile:
     reader = csv.reader(csvfile)
     # for row in reader:
